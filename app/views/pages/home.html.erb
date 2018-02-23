@@ -12,7 +12,7 @@
 -->
 
 <section class="bg-1 text-center">
-  <h1>Test App - Not real products, and credit cards will not be charged</h1>
+  <h1>Test App - Not real rooms, and credit cards will not be charged</h1>
   <p class="lead">Otherwise, knock yourself out</p>
 </section>
 
@@ -22,13 +22,13 @@
 
 <% @products.each do |product| %>
     
-    <div class="col-md-3 product_gallery" >
+    <div class="col-md-4 product_gallery" >
       
   
       <% if product.picture? %>
      <%= link_to image_tag(product.picture.url, size: "250x200", class: "gravatar"), product_path(product.id) %>
       <% else %>
-     <%= link_to image_tag('blank-thumb.png', size: "250x200", class: "gravatar"), product_path(product.id) %>
+     <%= link_to image_tag('blank-thumb.png', size: "250x250", class: "gravatar"), product_path(product.id) %>
       <% end %>
           
       <div class="gallery_h1", width:250> <%= link_to product.name , product_path(product.id) %> </div>
